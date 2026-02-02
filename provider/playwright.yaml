@@ -66,10 +66,10 @@ credentials_for_provider:
     label:
       en_US: Playwright URI
     help:
-      en_US: e.g. ws://host.docker.internal:3003
+      en_US: e.g. ws://host.docker.internal:3003 (required for script mode)
     placeholder:
       en_US: Enter the Playwright URI
-    required: true
+    required: false
     type: secret-input
 
   uri_type:
@@ -85,3 +85,13 @@ credentials_for_provider:
       - value: cdp
         label: { en_US: cdp }
     default: ws
+
+  mcp_uri:
+    label:
+      en_US: MCP URI
+    help:
+      en_US: e.g. http://host.docker.internal:3000 (required for MCP actions)
+    placeholder:
+      en_US: Enter the MCP server URI
+    required: false
+    type: secret-input
