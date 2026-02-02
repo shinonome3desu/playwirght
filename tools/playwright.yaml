@@ -1,0 +1,32 @@
+identity:
+  name: "playwright"
+  author: "kurose"
+  label:
+    en_US: "playwright"
+    zh_Hans: "playwright"
+    pt_BR: "playwright"
+    ja_JP: "playwright"
+description:
+  human:
+    en_US: "playwright plugin"
+    zh_Hans: "playwright plugin"
+    pt_BR: "playwright plugin"
+    ja_JP: "playwright plugin"
+  llm: "playwright plugin"
+parameters:
+  - name: script
+    type: string
+    required: true
+    label:
+      en_US: playwright script
+    human_description:
+      en_US: Python script executed with a `browser` variable.
+    llm_description: |
+      Send Python script to execute. Use `browser` variable.
+      Put the final output in `result` (string or bytes).
+      Example:
+      page = browser.new_page(); page.goto("https://example.com"); result = page.screenshot(full_page=True)
+    form: llm
+extra:
+  python:
+    source: tools/playwright.py

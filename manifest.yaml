@@ -1,0 +1,35 @@
+version: 0.0.1
+type: plugin
+author: kurose
+name: playwright
+label:
+  en_US: playwright
+  ja_JP: playwright
+  zh_Hans: playwright
+  pt_BR: playwright
+description:
+  en_US: playwright plugin
+  ja_JP: playwright plugin
+  zh_Hans: playwright plugin
+  pt_BR: playwright plugin
+icon: icon.svg
+icon_dark: icon-dark.svg
+resource:
+  memory: 268435456
+  permission: {}
+plugins:
+  tools:
+    - provider/playwright.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2026-02-02T16:13:59.6504721+09:00
+privacy: PRIVACY.md
+verified: false
