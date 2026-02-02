@@ -14,9 +14,21 @@ description:
     ja_JP: "playwright plugin"
   llm: "playwright plugin"
 parameters:
+  - name: actions
+    type: array
+    required: false
+    label:
+      en_US: MCP actions
+    human_description:
+      en_US: Structured MCP actions to execute against the Playwright MCP server.
+    llm_description: |
+      Provide a list of MCP tool calls. Each item must include:
+      - method: MCP method name, e.g. "tools/call"
+      - params: object payload for the method
+      The plugin will execute them sequentially and return the last result.
   - name: script
     type: string
-    required: true
+    required: false
     label:
       en_US: playwright script
     human_description:
